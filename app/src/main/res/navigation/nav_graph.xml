@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/hiFragment">
+
+    <fragment
+        android:id="@+id/hiFragment"
+        android:name="com.harsh.registrationflow.Fragments.HiFragment"
+        android:label="fragment_hi"
+        tools:layout="@layout/fragment_hi" >
+        <action
+            android:id="@+id/action_hiFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_hiFragment_to_appleFragment"
+            app:destination="@id/appleFragment" />
+        <action
+            android:id="@+id/action_hiFragment_to_facebookFragment"
+            app:destination="@id/facebookFragment" />
+        <action
+            android:id="@+id/action_hiFragment_to_googleFragment"
+            app:destination="@id/googleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.harsh.registrationflow.Fragments.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_termsofServiceFragment"
+            app:destination="@id/termsofServiceFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_hiFragment"
+            app:destination="@id/hiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.harsh.registrationflow.Fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_loggedInFragment"
+            app:destination="@id/loggedInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/termsofServiceFragment"
+        android:name="com.harsh.registrationflow.Fragments.TermsofServiceFragment"
+        android:label="fragment_termsof_service"
+        tools:layout="@layout/fragment_termsof_service" >
+        <action
+            android:id="@+id/action_termsofServiceFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.harsh.registrationflow.Fragments.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loggedInFragment"
+        android:name="com.harsh.registrationflow.Fragments.LoggedInFragment"
+        android:label="fragment_logged_in"
+        tools:layout="@layout/fragment_logged_in" >
+        <action
+            android:id="@+id/action_loggedInFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/appleFragment"
+        android:name="com.harsh.registrationflow.Fragments.AppleFragment"
+        android:label="fragment_apple"
+        tools:layout="@layout/fragment_apple" >
+        <action
+            android:id="@+id/action_appleFragment_to_loggedInFragment"
+            app:destination="@id/loggedInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/facebookFragment"
+        android:name="com.harsh.registrationflow.Fragments.FacebookFragment"
+        android:label="fragment_facebook"
+        tools:layout="@layout/fragment_facebook" >
+        <action
+            android:id="@+id/action_facebookFragment_to_loggedInFragment"
+            app:destination="@id/loggedInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/googleFragment"
+        android:name="com.harsh.registrationflow.Fragments.GoogleFragment"
+        android:label="fragment_google"
+        tools:layout="@layout/fragment_google" >
+        <action
+            android:id="@+id/action_googleFragment_to_loggedInFragment"
+            app:destination="@id/loggedInFragment" />
+        <action
+            android:id="@+id/action_googleFragment_to_loggedInFragment2"
+            app:destination="@id/loggedInFragment" />
+    </fragment>
+</navigation>
